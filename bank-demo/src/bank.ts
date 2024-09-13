@@ -17,6 +17,13 @@ export default class Bank {
         return this.accounts.find(account => account.accountNumber === accountNumber) === undefined
     }
 
+    /**
+     * Method to create a new bank account
+     * @param name name of account holder
+     * @param age age of account holder
+     * @param accountNumber number of new account
+     * @returns A new account if creation was succesful
+     */
     public createAccount(name: string, age: number, accountNumber: string): BankAccount {
         const isAccExists = this.findAccount(accountNumber)
         if(isAccExists) {
